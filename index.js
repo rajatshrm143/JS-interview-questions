@@ -92,6 +92,7 @@ for (let i = 0; i < arr1.length; i++) {
 // ***********************************************************
 // Give the output of these variables
 // ***********************************************************
+var a11 = 99;
 (() => {
   var a11 = (b1 = c1 = d1 = 2);
 })();
@@ -99,6 +100,16 @@ for (let i = 0; i < arr1.length; i++) {
 // console.log(b1);
 // console.log(c1);
 // console.log(d1);
+
+// &&
+
+let channel;
+channel = 'Outer Value';
+
+if (true) {
+  var channel = 'Inner Value';
+}
+// console.log(channel);
 
 // QUESTION : 7
 // ***********************************************************
