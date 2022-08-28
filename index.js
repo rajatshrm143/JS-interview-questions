@@ -103,11 +103,9 @@ var a11 = 99;
 
 // &&
 
-let channel;
-channel = 'Outer Value';
-
+let channel = 'Outer Value';
 if (true) {
-  var channel = 'Inner Value';
+  // var channel = 'Inner Value';
 }
 // console.log(channel);
 
