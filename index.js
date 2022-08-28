@@ -131,3 +131,29 @@ function abcde(param = '') {
   pqr();
 }
 abcde('Global');
+
+// QUESTION : 8
+// ***********************************************************
+// Make 3rd element color 'red' using JS
+// ***********************************************************
+document.querySelector('ul').style.color = 'green';
+document.querySelector('ul > li:nth-child(3)').style.color = 'red';
+
+// QUESTION : 9
+// ***********************************************************
+// Click on any element in list and alert its value
+// ***********************************************************
+const tag = document.querySelector('ul');
+// console.log(tag);
+tag.addEventListener('click', function (elem) {
+  alert(elem.target.innerHTML);
+});
+
+// OR
+// const tag = document.getElementsByName('ul');
+// console.log(tag);
+// for (let i = 0; i < tag.length; i++) {
+//   tag[i].addEventListener('click', function (elem) {
+//     alert(elem.target.innerHTML);
+//   });
+// }
