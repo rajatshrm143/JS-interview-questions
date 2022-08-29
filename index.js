@@ -166,3 +166,20 @@ tag.addEventListener('click', function (elem) {
 //     alert(elem.target.innerHTML);
 //   });
 // }
+
+// QUESTION : 10
+// ***********************************************************
+// input : "abc mnq xyz";
+// output : "cba qnm zyx"
+// ***********************************************************
+let str = 'abc mnq xyz';
+let arr3 = str.split(' ');
+console.log(arr3.reverse());
+let temp = '';
+for (let i = 0; i < arr3.length; i++) {
+  for (let j = arr3[i].length; j >= 0; j--) {
+    temp += arr3[i][j];
+  }
+  temp += ' ';
+}
+// console.log(temp);
