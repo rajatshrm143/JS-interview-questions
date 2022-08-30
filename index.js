@@ -174,7 +174,6 @@ tag.addEventListener('click', function (elem) {
 // ***********************************************************
 let str = 'abc mnq xyz';
 let arr3 = str.split(' ');
-console.log(arr3.reverse());
 let temp = '';
 for (let i = 0; i < arr3.length; i++) {
   for (let j = arr3[i].length; j >= 0; j--) {
@@ -183,3 +182,9 @@ for (let i = 0; i < arr3.length; i++) {
   temp += ' ';
 }
 // console.log(temp);
+
+// QUESTION : 11
+// ***********************************************************
+console.log(3 > 2 > 1); // false
+console.log('A' - 'B' + 50); // NaN
+// ***********************************************************
