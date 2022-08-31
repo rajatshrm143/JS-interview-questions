@@ -199,17 +199,18 @@ const names = [
   { text: 'Gamma', value: 4 },
 ];
 // Creates an array filled with only the array elements that pass a test.
-let filterResult = names.filter((x) => x.value > 3); //[{text: "Alpha", value: 5}, {text: "Gamma", value: 4}]
+let filterResult = names.filter((x) => x.value > 3);
 // console.log(filterResult);
+//[{text: "Alpha", value: 5}, {text: "Gamma", value: 4}]
 
 // Creates a new array with the results of a function applied to every element in the array.
 let mapResult = names.map((x) => ({ ...x, value: x.value * 10 }));
-//[{text: "Alpha", value: 50}, {text: "Beta", value: 20}, {text: "Gamma", value: 40}];
 // console.log(mapResult);
+//[{text: "Alpha", value: 50}, {text: "Beta", value: 20}, {text: "Gamma", value: 40}];
 
 // Executes a provided function for each value of the array (from left-to-right). Then returns a single value, the accumulator.
 let reduceResult = names.reduce((accumulator, currentValue) =>
   currentValue.value > accumulator.value ? currentValue : accumulator
 );
-// Get the largest object by value: {"text":"Alpha","value":5}
 // console.log(reduceResult);
+// Get the largest object by value: {"text":"Alpha","value":5}
