@@ -169,19 +169,19 @@ tag.addEventListener('click', function (elem) {
 
 // QUESTION : 10
 // ***********************************************************
-// input : "abc mnq xyz";
-// output : "cba qnm zyx"
+// Reverse each word of string
 // ***********************************************************
-let str = 'abc mnq xyz';
-let arr3 = str.split(' ');
-let temp = '';
-for (let i = 0; i < arr3.length; i++) {
-  for (let j = arr3[i].length; j >= 0; j--) {
-    temp += arr3[i][j];
+var string = 'Welcome to this Javascript world!';
+var arrSplit = string.split(' ');
+output = [];
+for (let i = 0; i < arrSplit.length; i++) {
+  let temp = '';
+  for (let j = arrSplit[i].length - 1; j >= 0; j--) {
+    temp += arrSplit[i][j];
   }
-  temp += ' ';
+  output.push(temp);
 }
-// console.log(temp);
+console.log(output.join(' '));
 
 // QUESTION : 11
 // ***********************************************************
