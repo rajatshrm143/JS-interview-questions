@@ -8,14 +8,15 @@ const abc = {
     // console.log(this.firstName);
   },
 };
+firstName = 'RajatShrm';
 const abcd = {
   firstName: 'Sharma',
   getName: () => {
-    //console.log(this.firstName);
+    // console.log(this.firstName);
   },
 };
-abc.getName();
-abcd.getName();
+abcd.getName(); // 'RajatShrm'
+abc.getName(); // 'Rajat'
 
 // QUESTION : 2
 // ***********************************************************
@@ -96,10 +97,10 @@ var a11 = 99;
 (() => {
   var a11 = (b1 = c1 = d1 = 2);
 })();
-// console.log(a11);
-// console.log(b1);
-// console.log(c1);
-// console.log(d1);
+// console.log(a11); // 99
+// console.log(b1); // 2
+// console.log(c1); // 2
+// console.log(d1); // 2
 
 // &&
 
@@ -113,7 +114,7 @@ if (true) {
 // ***********************************************************
 // Create an array with numbers & their recurrence from the given Array
 // ***********************************************************
-let targetArray = [2, 1, 4, 8, 6, 9, 7, 1, 2, 7, 7, 7, 8, 5, 5, 1, 3, 3];
+let targetArray = [2, 1, 4, 8, 6, 9, 7, 1, 2, 7, 7, 7, 8, 5, 5, 1, 3, 3, 9];
 let output = {};
 for (let i = 0; i < targetArray.length; i++) {
   if (output[targetArray[i]]) {
@@ -123,6 +124,7 @@ for (let i = 0; i < targetArray.length; i++) {
   }
 }
 // console.log(JSON.stringify(output));
+// {"1":3,"2":2,"3":2,"4":1,"5":2,"6":1,"7":4,"8":2,"9":2}
 
 // QUESTION : 7
 // ***********************************************************
@@ -173,15 +175,16 @@ tag.addEventListener('click', function (elem) {
 // ***********************************************************
 var string = 'Welcome to this Javascript world!';
 var arrSplit = string.split(' ');
-output = [];
+// console.log(arrSplit);
+let outputRev = [];
 for (let i = 0; i < arrSplit.length; i++) {
   let temp = '';
   for (let j = arrSplit[i].length - 1; j >= 0; j--) {
     temp += arrSplit[i][j];
   }
-  output.push(temp);
+  outputRev.push(temp);
 }
-console.log(output.join(' '));
+// console.log(outputRev.join(' '));
 
 // QUESTION : 11
 // ***********************************************************
@@ -198,15 +201,16 @@ const names = [
   { text: 'Beta', value: 2 },
   { text: 'Gamma', value: 4 },
 ];
-// Creates an array filled with only the array elements that pass a test.
-let filterResult = names.filter((x) => x.value > 3);
-// console.log(filterResult);
-//[{text: "Alpha", value: 5}, {text: "Gamma", value: 4}]
 
 // Creates a new array with the results of a function applied to every element in the array.
 let mapResult = names.map((x) => ({ ...x, value: x.value * 10 }));
-// console.log(mapResult);
+// console.log(JSON.stringify(mapResult));
 //[{text: "Alpha", value: 50}, {text: "Beta", value: 20}, {text: "Gamma", value: 40}];
+
+// Creates an array filled with only the array elements that pass a test.
+let filterResult = names.filter((x) => x.value > 3);
+// console.log(JSON.stringify(filterResult));
+//[{text: "Alpha", value: 5}, {text: "Gamma", value: 4}]
 
 // Executes a provided function for each value of the array (from left-to-right). Then returns a single value, the accumulator.
 let reduceResult = names.reduce((accumulator, currentValue) =>
@@ -214,3 +218,17 @@ let reduceResult = names.reduce((accumulator, currentValue) =>
 );
 // console.log(reduceResult);
 // Get the largest object by value: {"text":"Alpha","value":5}
+
+// QUESTION : 13
+// ***********************************************************
+// What will be the output
+// ***********************************************************
+let a12 = 0;
+let b12 = 0;
+function abcdr(a, b) {
+  this.a12 = a;
+  this.b12 = b;
+}
+let obj = new abcdr(2, 4);
+abcdr(5, 10);
+// console.log(this.a12, this.b12); // 5 10
