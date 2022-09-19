@@ -269,3 +269,44 @@ function abcdr(a, b) {
 let obj = new abcdr(2, 4);
 abcdr(5, 10);
 // console.log(this.a12, this.b12); // 5 10
+
+// QUESTION : 14
+// ***********************************************************
+// Sort an array in decreasing order
+// ***********************************************************
+let arr14 = [2, 1, 5, 3, 7, 8, 0];
+// console.log(arr14.sort((a, b) => b - a));
+
+// QUESTION : 15
+// ***********************************************************
+// Diff btw Slice & Splice
+// ***********************************************************
+//splice
+var spliceArr = [1, 2, 3, 4, 5];
+//array.splice(startIndex, deleteCount)
+// console.log(JSON.stringify(spliceArr.splice(2, 3))); // [3,4,5]
+
+//slice
+var sliceArr = [1, 2, 3, 4, 5];
+// array.slice(startIndex, endIndex)
+// console.log(JSON.stringify(sliceArr.slice(2, 3))); // [3]
+
+// console.log('----after-----');
+// SP LICE  = SPlitting original array
+// console.log(JSON.stringify(spliceArr)); // [1,2]
+
+// S LICE = NO splitting original array
+// console.log(JSON.stringify(sliceArr)); // [1,2,3,4,5]
+
+// QUESTION : 16
+// ***********************************************************
+// Diff btw Split & Join
+// ***********************************************************
+// Split - to convert a string into array
+var string = 'My Name is Rajat Sharma';
+// string.split(separator, limit);
+// console.log(JSON.stringify(string.split(' ', 3))); // ["My","Name","is"]
+
+var arrayStr = ['My', 'Name', 'is'];
+// Join - to convert a array into string
+// console.log(JSON.stringify(arrayStr.join(' '))); // "My Name is"
