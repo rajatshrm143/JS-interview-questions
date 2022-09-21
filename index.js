@@ -4,19 +4,24 @@
 // ***********************************************************
 const abc = {
   firstName: 'Rajat',
+  address: {
+    street: '9th',
+    addr1: 'Dwr',
+    city: 'Mzn',
+  },
   getName: function () {
     // console.log(this.firstName);
   },
 };
-firstName = 'RajatShrm';
+var firstName = 'RajatShrm';
 const abcd = {
   firstName: 'Sharma',
   getName: () => {
     // console.log(this.firstName);
   },
 };
-abcd.getName(); // 'RajatShrm'
 abc.getName(); // 'Rajat'
+abcd.getName(); // 'RajatShrm'
 
 // QUESTION : 2
 // ***********************************************************
@@ -24,9 +29,10 @@ abc.getName(); // 'Rajat'
 // ***********************************************************
 const x = Object.create(abc); // create new object
 const xy = Object.assign(abc); // shallow copy of object
-const xyz = JSON.parse(JSON.stringify(abc)); // deep copy of object
-const xyzq = { ...abc }; // shallow copy of object
+const xyz = { ...abc }; // shallow copy of object
+const xyzq = JSON.parse(JSON.stringify(abc)); // deep copy of object
 abc.firstName = 'manoj';
+abc.address.street = '10th';
 // console.log(x);
 // console.log(xy);
 // console.log(xyz);
@@ -269,6 +275,7 @@ function abcdr(a, b) {
 let obj = new abcdr(2, 4);
 abcdr(5, 10);
 // console.log(this.a12, this.b12); // 5 10
+// console.log(JSON.stringify(obj)); // {"a12":2,"b12":4}
 
 // QUESTION : 14
 // ***********************************************************
