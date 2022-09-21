@@ -317,3 +317,21 @@ var string = 'My Name is Rajat Sharma';
 var arrayStr = ['My', 'Name', 'is'];
 // Join - to convert a array into string
 // console.log(JSON.stringify(arrayStr.join(' '))); // "My Name is"
+
+// QUESTION : 16
+// ***********************************************************
+// Find 10 Prime numbers
+// ***********************************************************
+for (let i = 2; i <= 10; i++) {
+  let flag = 0;
+  // looping through 2 to user input number
+  for (let j = 2; j < i; j++) {
+    if (i % j == 0) {
+      flag = 1;
+    }
+  }
+  // if number greater than 1 and not divisible by other numbers
+  if (i > 1 && flag == 0) {
+    console.log(i);
+  }
+}
