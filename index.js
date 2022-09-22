@@ -332,6 +332,37 @@ for (let i = 2; i <= 10; i++) {
   }
   // if number greater than 1 and not divisible by other numbers
   if (i > 1 && flag == 0) {
-    console.log(i);
+    // console.log(i);
   }
 }
+
+// QUESTION : 17
+// ***********************************************************
+// Find the maximum character word from the string
+// ***********************************************************
+let str =
+  'Lorem Ipsum is simply dummy text of the printing and typesetting industry.';
+let arrMax = str.split(' ');
+let storeLength = [];
+for (let i = 0; i < arrMax.length; i++) {
+  storeLength.push({ word: arrMax[i], length: arrMax[i].length });
+}
+// console.log(JSON.stringify(storeLength));
+// [{"word":"Lorem","length":5},{"word":"Ipsum","length":5},{"word":"is","length":2},{"word":"simply","length":6},{"word":"dummy","length":5},{"word":"text","length":4},{"word":"of","length":2},{"word":"the","length":3},{"word":"printing","length":8},{"word":"and","length":3},{"word":"typesetting","length":11},{"word":"industry.","length":9}]
+// console.log(storeLength.sort((a, b) => a.length - b.length)[`${storeLength.length - 1}`]);
+// {word: "typesetting", length: 11}
+
+// QUESTION : 18
+// ***********************************************************
+// Find 2nd largest number from the array
+// ***********************************************************
+let arr3 = [1, 4, 10, 3, 2, 4, 5, 6, 7, 7, 8, 9, 9];
+arr3.sort((a, b) => a - b);
+let arr4 = [];
+for (let j = 0; j < arr3.length; j++) {
+  if (arr3[j - 1] !== arr3[j] && arr3[j - 1] < arr3[j]) {
+    arr4.push(arr3[j]); // pick unique items from array
+  }
+}
+// console.log(arr4); // [2, 3, 4, 5, 6, 7, 8, 9, 10]
+// console.log(arr4[arr4.length - 2]);
