@@ -366,3 +366,30 @@ for (let j = 0; j < arr3.length; j++) {
 }
 // console.log(arr4); // [2, 3, 4, 5, 6, 7, 8, 9, 10]
 // console.log(arr4[arr4.length - 2]);
+
+// QUESTION : 18
+// ***********************************************************
+// Find the salary total based on the department
+// ***********************************************************
+let empList = [
+  { deptName: 'IT', salary: 10000 },
+  { deptName: 'HR', salary: 10000 },
+  { deptName: 'Accounts', salary: 15000 },
+  { deptName: 'Admin', salary: 20000 },
+  { deptName: 'IT', salary: 30000 },
+  { deptName: 'Admin', salary: 30000 },
+  { deptName: 'Accounts', salary: 40000 },
+  { deptName: 'HR', salary: null },
+];
+
+output = {};
+
+for (let i = 0; i < empList.length; i++) {
+  if (output[empList[i].deptName]) {
+    output[empList[i].deptName] += empList[i].salary;
+  } else {
+    output[empList[i].deptName] = empList[i].salary;
+  }
+}
+
+// console.log(output); // {IT: 40000, HR: 10000, Accounts: 55000, Admin: 50000}
