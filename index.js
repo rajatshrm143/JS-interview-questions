@@ -367,7 +367,7 @@ for (let j = 0; j < arr3.length; j++) {
 // console.log(arr4); // [2, 3, 4, 5, 6, 7, 8, 9, 10]
 // console.log(arr4[arr4.length - 2]);
 
-// QUESTION : 18
+// QUESTION : 19
 // ***********************************************************
 // Find the salary total based on the department
 // ***********************************************************
