@@ -382,26 +382,55 @@ let empList = [
   { deptName: 'HR', salary: null },
 ];
 
-output = {};
+output2 = {};
 
 for (let i = 0; i < empList.length; i++) {
-  if (output[empList[i].deptName]) {
-    output[empList[i].deptName] += empList[i].salary;
+  if (output2[empList[i].deptName]) {
+    output2[empList[i].deptName] += empList[i].salary;
   } else {
-    output[empList[i].deptName] = empList[i].salary;
+    output2[empList[i].deptName] = empList[i].salary;
   }
 }
-// console.log(output); // {IT: 40000, HR: 10000, Accounts: 55000, Admin: 50000}
+// console.log(output2); // {IT: 40000, HR: 10000, Accounts: 55000, Admin: 50000}
 
 // QUESTION : 20
 // ***********************************************************
 // Create arrays(of 3 elements) from an array
 // ***********************************************************
 let arrBi = [1, 2, 3, 4, 5, 6, 8, 9, 4, 3, 5, 7];
-let output = {};
+let output3 = {};
 let temp = arrBi.length / 3;
 for (let i = 1; i <= temp; i++) {
   // console.log(i, temp);
-  output[`arr${i}`] = arrBi.splice(0, 3);
+  output3[`arr${i}`] = arrBi.splice(0, 3);
 }
-console.log(output);
+// console.log(output3);
+
+// QUESTION : 21
+// ***********************************************************
+// Find output of this code
+// ***********************************************************
+// console.log(0);
+setTimeout(() => {
+  // console.log(1);
+});
+Promise.resolve()
+  .then(() => {
+    // console.log(2);
+  })
+  .then(() => {
+    // console.log(3);
+  })
+  .then(() => {
+    // console.log(4);
+  });
+
+// QUESTION : 22
+// ***********************************************************
+// Sort an array of strings
+// ***********************************************************
+const arrStr = ['Rajat', 'Sharma', 'Amit', 'Sumit', 'Naman'];
+const sortArr = arrStr.sort((a, b) => {
+  return a.localeCompare(b);
+});
+// console.log(sortArr);
