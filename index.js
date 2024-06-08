@@ -395,15 +395,9 @@ for (let i = 0; i < empList.length; i++) {
 
 // QUESTION : 20
 // ***********************************************************
-// Create 3 elemets arrays from an array of n elements
+// Create arrays(of 3 elements) from an array
 // ***********************************************************
 let arrBi = [1, 2, 3, 4, 5, 6, 8, 9, 4, 3, 5, 7];
-// console.log(arrBi.length); // 12
-// let arrBi1 = arrBi.splice(0, 3);
-// let arrBi2 = arrBi.splice(3, 3);
-// let arrBi3 = arrBi.splice(3, 3);
-// console.log(arrBi1, arrBi2, arrBi3);
-
 let output = {};
 let temp = arrBi.length / 3;
 for (let i = 1; i <= temp; i++) {
