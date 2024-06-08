@@ -349,7 +349,9 @@ for (let i = 0; i < arrMax.length; i++) {
 }
 // console.log(JSON.stringify(storeLength));
 // [{"word":"Lorem","length":5},{"word":"Ipsum","length":5},{"word":"is","length":2},{"word":"simply","length":6},{"word":"dummy","length":5},{"word":"text","length":4},{"word":"of","length":2},{"word":"the","length":3},{"word":"printing","length":8},{"word":"and","length":3},{"word":"typesetting","length":11},{"word":"industry.","length":9}]
-// console.log(storeLength.sort((a, b) => a.length - b.length)[`${storeLength.length - 1}`]);
+console.log(
+  storeLength.sort((a, b) => a.length - b.length)[storeLength.length - 1]
+);
 // {word: "typesetting", length: 11}
 
 // QUESTION : 18
