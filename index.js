@@ -358,14 +358,14 @@ for (let i = 0; i < arrMax.length; i++) {
 // ***********************************************************
 let arr3 = [1, 4, 10, 3, 2, 4, 5, 6, 7, 7, 8, 9, 9];
 arr3.sort((a, b) => a - b);
-let arr4 = [];
+let arr4 = [arr3[0]];
 for (let j = 0; j < arr3.length; j++) {
-  if (arr3[j - 1] !== arr3[j] && arr3[j - 1] < arr3[j]) {
+  if (arr3[j - 1] < arr3[j]) {
     arr4.push(arr3[j]); // pick unique items from array
   }
 }
-// console.log(arr4); // [2, 3, 4, 5, 6, 7, 8, 9, 10]
-// console.log(arr4[arr4.length - 2]);
+console.log(arr4); // [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+console.log(arr4[arr4.length - 2]);
 
 // QUESTION : 19
 // ***********************************************************
