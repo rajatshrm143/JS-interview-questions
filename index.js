@@ -478,7 +478,7 @@ function countXYZ(obj) {
   return count;
 }
 
-var obj = {
+var obj3 = {
   name: 'xyz',
   arr: ['xyz', 'yyy', 'xyz'],
   obj: {
@@ -490,4 +490,4 @@ var obj = {
   },
 };
 
-// console.log(countXYZ(obj)); // Output: 5
+console.log(countXYZ(obj3)); // Output: 5
