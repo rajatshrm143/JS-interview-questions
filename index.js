@@ -436,3 +436,58 @@ const sortArr = arrStr.sort((a, b) => {
   return a.localeCompare(b);
 });
 // console.log(sortArr);
+
+// QUESTION : 23
+// ***********************************************************
+// Count the number of 'xyz' from the given object
+// ***********************************************************
+function countXYZ(obj) {
+  let count = 0;
+
+  // Check if the current value is an object
+  if (typeof obj === 'object' && obj !== null) {
+    // If it's an array, check each element
+    if (Array.isArray(obj)) {
+      for (let i = 0; i < obj.length; i++) {
+        if (obj[i] === 'xyz') {
+          count++;
+        }
+        // Recursively call the function if the element is an object
+        else if (typeof obj[i] === 'object' && obj[i] !== null) {
+          count += countXYZ(obj[i]);
+        }
+      }
+    }
+    // If it's an object, check its keys
+    else {
+      for (let key in obj) {
+        if (obj.hasOwnProperty(key)) {
+          // Check if the key's value is 'xyz'
+          if (obj[key] === 'xyz') {
+            count++;
+          }
+          // Recursively call the function if the value is an object
+          else if (typeof obj[key] === 'object' && obj[key] !== null) {
+            count += countXYZ(obj[key]);
+          }
+        }
+      }
+    }
+  }
+
+  return count;
+}
+
+var obj = {
+  name: 'xyz',
+  arr: ['xyz', 'yyy', 'xyz'],
+  obj: {
+    name: 'xyz',
+    obj: {
+      name: 'xyz',
+      arr: [],
+    },
+  },
+};
+
+// console.log(countXYZ(obj)); // Output: 5
